@@ -1,0 +1,15 @@
+const Discord = require('discord.js');
+const client = new Discord.Client();
+
+client.on('ready', () => {
+console.log(`Logged in as ${client.user.tag}!`);
+console.log("Streamstatus by DayZoonHD")
+
+client.user.setActivity(`Easteria Recrute`, {
+type: "STREAMING",
+url: "https://www.twitch.tv/easteriaesport"})
+    .then(presence => console.log(`Your Status has been set to  ${presence.game ? presence.game.none : 'none'}`))
+    .catch(console.error);
+});
+
+client.login("NzA5MDYyNzEzMzg0NjMyNDMw.XssSBQ.4ftSjK1z1sJ21atZdEXcFsaD1qE");
